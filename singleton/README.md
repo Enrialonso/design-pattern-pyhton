@@ -1,10 +1,10 @@
-#Design Pattern: Singleton
+# Design Pattern: Singleton
 
 Singleton is possibly the simplest pattern that exists, this patter allow create a single instance of a class and restrict 
 the new instances creation. This is usefull, for example if you are interested to control the instances creation for 
 connection to a resource, whit this patter you guarantee the access to the resources from a unique instance arround the all code.
 
-####Uses case:
+#### Uses case:
 - **Logger:** normaly in an aplication use the logs with the same configuration and access to the same file for write the traces for the program,
 in this case, you need a unique point of access to manage the writing the traces and avoid the issues if many instances try to log
 at the same time on the file. This pattern restric that and allow a unique point of access.
@@ -22,7 +22,7 @@ the data and no access for another slowest resources. Is better and quikly acces
 allow restrict the access along the aplication to only one instance, donts matter how many intances are created, all 
 databesa access is driven for the same class instance.
 
-####Python implementation:
+#### Python implementation:
 
 Without arguments on `__init__`
 
@@ -55,9 +55,7 @@ b.print_attr()
 print(f'a == b: {a == b}')
 
 ```
-
 Output code:
-
 ```shell script
 class id = 140394913705360
 attr = 10
@@ -110,7 +108,7 @@ b.sample_method()
 b.print_attr()
 print(f'a == b: {a == b}')
 ```
- Output:
+Output:
  
  ```shell script
 class id = 140401281764944
@@ -131,7 +129,7 @@ ensure instance with the same values on the frist instance of the class.
 
 ##Others Implementations:
 
-####By Heritage:
+#### By Heritage:
 
 ```python
 class Singleton(object):
@@ -166,7 +164,7 @@ Some Method!!!
 Some Method!!!
 ```
 
-####By Decorator:
+#### By Decorator:
 
 ```python
 def singleton(class_):
